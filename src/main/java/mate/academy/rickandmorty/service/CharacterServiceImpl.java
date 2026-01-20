@@ -20,10 +20,10 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class CharacterServiceImpl implements CharacterService {
 
+    private final Random random = new Random();
     private final CharacterRepository characterRepository;
     private final CharacterMapper characterMapper;
     private final RestTemplate restTemplate;
-    private final Random random = new Random();
 
     @Value("${rickandmorty.api.url}")
     private String defaultUrl;
